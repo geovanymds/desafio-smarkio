@@ -18,7 +18,7 @@ const {
     }
 
     static associate(models) {
-      // define association here
+      
     }
   };
 

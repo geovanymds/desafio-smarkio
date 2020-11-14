@@ -22,6 +22,14 @@ module.exports = {
         values: ['nova','aprovada','corrigida'],
         defaultValue: 'nova',
         allowNull: false
+      },
+      user_id: {
+        allowNull: false,
+        type: Sequelize.INTEGER
+      },
+      intention_id: {
+        allowNull: false,
+        type: Sequelize.INTEGER
       }
     });
   },

@@ -1,0 +1,25 @@
+{
+  "name": "desafio-smarkio",
+  "version": "1.0.0",
+  "description": "Dashboard para análise de mensagens de um chatbot",
+  "main": "server.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geovanymds/desafio-smarkio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/geovanymds/desafio-smarkio/issues"
+  },
+  "homepage": "https://github.com/geovanymds/desafio-smarkio#readme",
+  "devDependencies": {
+    "sequelize-cli": "^6.2.0"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.3.5"
+  }
+}

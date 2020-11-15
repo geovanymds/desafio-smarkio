@@ -22,7 +22,7 @@ module.exports = {
     return Promise.all([
       await queryInterface.bulkInsert("users", users),
       await queryInterface.bulkInsert("intentions", intentions),
-      ...await insertMessages(queryInterface,5),
+      ...await insertMessages(queryInterface,3),
     ]);
   },
 

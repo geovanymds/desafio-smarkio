@@ -13,12 +13,17 @@ const {
           email: DataTypes.STRING,
           date: DataTypes.DATE
         },
-        {sequelize, tableName: 'Users', underscored: true}
+        {sequelize, tableName: 'users', underscored: true}
       )
     }
 
     static associate(models) {
-      
+
+      this.hasMany(models.Message,{
+        as: 'user_messages',
+        foreignKey: 'user_id'
+      });
+          
     }
   };
 

@@ -1,0 +1,25 @@
+html, body {
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #3c3c3c;
+  color: #cfcfcf;
+}
+
+div {
+  line-height: 15px;
+  margin-bottom: 3px;
+  background-color: grey;
+  text-align: right;
+  padding-right: 5px;
+  font-size: 10px;
+  color: #cfcfcf;
+}
+

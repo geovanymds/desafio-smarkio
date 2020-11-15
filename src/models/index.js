@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const config = require('../../../config/database');
+const config = require('../../config/database');
 const Intention = require('./Intention');
 const User = require('./User');
 const Message = require('./Message');

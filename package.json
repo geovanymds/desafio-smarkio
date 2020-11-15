@@ -4,7 +4,7 @@
   "description": "Dashboard para análise de mensagens de um chatbot",
   "main": "server.js",
   "scripts": {
-    "start":"node src/index.js"
+    "start": "nodemon src/server.js"
   },
   "repository": {
     "type": "git",
@@ -18,10 +18,14 @@
   "homepage": "https://github.com/geovanymds/desafio-smarkio#readme",
   "devDependencies": {
     "faker": "^5.1.0",
+    "nodemon": "^2.0.6",
     "sequelize-cli": "^6.2.0"
   },
   "dependencies": {
+    "csvtojson": "^2.0.10",
     "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
     "mysql2": "^2.2.5",
     "sequelize": "^6.3.5"
   }

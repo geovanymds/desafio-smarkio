@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatbot Dashboard</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="topContainer">
+      <div>
+        <h2></h2>
+        <p></p>
+      </div>
+      <div>
+        <h2></h2>
+        <p></p>
+      </div>
+      <div>
+        <h2></h2>
+        <p></p>
+      </div>
+      <div>
+        <h2></h2>
+        <p></p>
+      </div>
+      <div>
+        <h2></h2>
+        <p></p>
+      </div>
+    </div>
+
+    <script>
+      const title = "Analytics";
+
+      d3.select("body").append("h3").text(title);
+
+      d3.csv("./util/analytics.csv", d3.autoType).then((data) => {
+        const keys = Object.keys(data[0]);
+        const values = Object.values(data[0]);
+        console.log(values);
+        d3.select("body")
+          .selectAll("div")
+          .data(values)
+          .enter()
+          .append("div")
+          .style("width", (v) => {
+            return v * 0.001 + "px";
+          })
+          .style("height", "15px");
+      });
+    </script>
+  </body>
+</html>

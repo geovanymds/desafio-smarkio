@@ -50,4 +50,4 @@ Para gerar o .csv com as mesmas métricas que utilizei execute a query utils/db/
 
 ## Considerações
 
-As queries de consulta no banco estão disponibilizadas na pasta 'utils/db', caso deseje realizar as consultas diretamente pelo SGDB.
+As queries de consulta no banco estão disponibilizadas na pasta 'utils/db', caso deseje realizar as consultas diretamente pelo SGDB. Os índices gerados foram feitos para o atributo 'date' de cada tabela pois era a principal restrição para consulta.

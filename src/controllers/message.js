@@ -49,12 +49,10 @@ exports.countMessagesByIntention = async (req, res, next) => {
   const { begin, end } = req.query;
 
   try {
-    
+
     const qtd = await Message.count({
       distinct: "id",
-      attributes: {
-        include: [col('intnetions.name')]
-      },
+      attributes: [col('name')],
       where: {
         date: {
           [Op.between]: [begin, end],

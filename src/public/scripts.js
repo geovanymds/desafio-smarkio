@@ -82,26 +82,30 @@ async function getMessageByIntention() {
 
   const json = await response.json();
 
-  console.log(json);
-
   const values = json
     .map((element) => {
-      return {id: element.intention_id,count: element.count};
+      return {
+        id: element.intention_id,
+        count: element.count,
+        name: !!element.name ? element.name.split(" ")[0]:"",
+      };
     })
-    .sort((a,b)=>{
-      return a.count > b.count
+    .sort((a, b) => {
+      return a.count > b.count;
     })
     .reverse()
     .slice(1, 6);
 
-  console.log(values);
+  console.log(json);
 
-  const newValues = values.map((value)=>{
+  const newValues = values.map((value) => {
     return value.count;
   });
 
-  const ids = values.map((value)=>{
-    return "IntentionId " + value.id + " messages"; 
+  const ids = values.map((value) => {
+    if (!!value.name) {
+      return value.name + " messages";
+    }
   });
 
   data = {
@@ -121,8 +125,6 @@ async function getMessageByIntention() {
     // These labels appear in the legend and in the tooltips when hovering different arcs
     labels: [...ids],
   };
-
-
 
   const ctx = document.getElementById("pieChart").getContext("2d");
 

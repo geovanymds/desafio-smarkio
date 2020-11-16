@@ -1,10 +1,11 @@
 const Message = require("../models/Message");
-const { Op } = require("sequelize");
+const { Op, col, fn } = require("sequelize");
 const sequelize = require("../models/index");
 const parser = require("csvtojson");
 
 exports.getAnalytics = async (req, res, next) => {
   try {
+
     let json = await parser().fromFile(
       __dirname + "/../public/csv/analytics.csv"
     );
@@ -51,11 +52,21 @@ exports.countMessagesByIntention = async (req, res, next) => {
     
     const qtd = await Message.count({
       distinct: "id",
+      attributes: {
+        include: [col('intnetions.name')]
+      },
       where: {
         date: {
           [Op.between]: [begin, end],
         },
       },
+      include: [
+        {
+          as:'messages_intention',
+          model: sequelize.models.Intention,
+          attributes: [col('intnetions.name')]
+        }
+      ],
       group: ["intention_id"],
     });
 

@@ -12,6 +12,7 @@ body {
   background-color: #FFF;
   padding: 1rem;
   font-family: 'Roboto', sans-serif;
+  color: #FFF;
 }
 
 p, h1, h2 {
@@ -33,9 +34,20 @@ ul {
 .topContainer {
   padding: 1rem;
   display: flex;
-  background-color:  #FFF;
+  background-color: #FFF;
   gap: 1rem;
   max-width: 100%;
+  animation: show 0.7s ease forwards;
+}
+
+@keyframes show {
+  from {
+    opacity:0;
+  }
+
+  to {
+    opacity:1;
+  }
 }
 
 .topBox {

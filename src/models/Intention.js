@@ -26,6 +26,7 @@ class Intention extends Model {
     WHERE m.date BETWEEN ? AND ? GROUP BY m.intention_id 
     ORDER BY percent DESC LIMIT 10;`;
   }
+
 }
 
 module.exports = Intention;

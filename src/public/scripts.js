@@ -101,7 +101,7 @@ async function getMessageByIntention() {
   });
 
   const ids = values.map((value)=>{
-    return "Intention" + value.id + " Messages"; 
+    return "IntentionId " + value.id + " messages"; 
   });
 
   data = {
@@ -122,6 +122,8 @@ async function getMessageByIntention() {
     labels: [...ids],
   };
 
+
+
   const ctx = document.getElementById("pieChart").getContext("2d");
 
   var chart = new Chart(ctx, {
@@ -129,7 +131,7 @@ async function getMessageByIntention() {
     type: "doughnut",
     data: data,
     // Configuration options go here
-    options: {},
+    option: {},
   });
 }
 

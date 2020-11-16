@@ -14,18 +14,7 @@ exports.trendIntentions = async (req,res,next) => {
       replacements: [begin,end]
     });
 
-    let response = [];
-    
-    result.forEach((element)=>{
-      response.push(...element);
-    });
-
-    response = response.map((element)=>{
-      return {
-        percent: +element.percent,
-        intention_id: element.intention_id
-      }
-    });
+    let response = [...result[0]];
 
     return res.status(200).json(response);
 

@@ -21,9 +21,10 @@ class Intention extends Model {
   }
 
   static getTrendQuery() {
-    return `SELECT 100 * (COUNT(CASE WHEN status = 'aprovada' THEN 1 END) / COUNT(*)) AS percent, m.intention_id
-    FROM chatbot.messages m WHERE m.date BETWEEN ? AND ? 
-    GROUP BY m.intention_id ORDER BY percent DESC LIMIT 10;`;
+    return `SELECT 100 * (COUNT(CASE WHEN status = 'aprovada' THEN 1 END) / COUNT(*)) AS percent, m.intention_id, i.name
+    FROM chatbot.messages m  JOIN chatbot.intentions i ON m.intention_id=i.id
+    WHERE m.date BETWEEN ? AND ? GROUP BY m.intention_id 
+    ORDER BY percent DESC LIMIT 10;`;
   }
 }
 

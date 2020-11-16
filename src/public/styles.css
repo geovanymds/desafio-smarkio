@@ -9,17 +9,95 @@ html, body {
 }
 
 body {
-  background-color: #3c3c3c;
-  color: #cfcfcf;
+  background-color: #FFF;
+  padding: 1rem;
+  font-family: 'Roboto', sans-serif;
 }
 
-div {
-  line-height: 15px;
-  margin-bottom: 3px;
-  background-color: grey;
-  text-align: right;
-  padding-right: 5px;
-  font-size: 10px;
-  color: #cfcfcf;
+p, h1, h2 {
+  color: #FFF;
 }
 
+ul {
+  list-style-type: none;
+}
+.globalContainer {
+  display: flex;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.topContainer {
+  padding: 1rem;
+  display: flex;
+  background-color:  #FFF;
+  gap: 1rem;
+  max-width: 100%;
+}
+
+.topBox {
+  background-color: #003f5c;
+  display: flex;
+  flex-direction: column;
+  width: 160px;
+  height: 160px;
+  border-radius: 7px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 1.5rem 1rem;
+}
+
+.canvasContainer {
+  display: flex;
+  max-width: 450px;
+  max-height: 600px;
+  margin-left: 1rem;
+  margin-top: 2rem;
+}
+
+.boxTitle {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.boxContent {
+  margin: auto;
+  font-size: 250%;
+  padding: 0;
+}
+
+.moreDetails {
+  border-radius: 7px;
+  padding: 1rem;
+  max-width: 100%;
+  background-color:#7a5195;
+  padding-bottom: 2rem;
+}
+
+.detailsContainer {
+  width: 100%;
+  padding: 1rem;
+}
+
+.title {
+  font-size: 200%;
+  font-weight: 400;
+}
+
+.listItem {
+  color: #FFF;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-top: 1.5rem;
+  border-bottom: solid 1px #FFF;
+}
+
+.julho {
+  color: #7a5195;
+  text-transform: uppercase;
+  margin: 2rem;
+}

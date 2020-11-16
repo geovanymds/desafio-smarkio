@@ -5,11 +5,12 @@ const parser = require("csvtojson");
 
 exports.getAnalytics = async (req, res, next) => {
   try {
-    const json = await parser().fromFile(
+    let json = await parser().fromFile(
       __dirname + "/../public/csv/analytics.csv"
     );
-
-    return res.status(200).json(json);
+    json = json[0];
+    
+    return res.status(200).send(json);
   } catch (error) {
     if (!error.statusCode) {
       error.statusCode = 500;

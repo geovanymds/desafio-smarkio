@@ -13,6 +13,7 @@ Dashboard que consome os dados de um banco de dados relacional através de uma A
 ### 2 - Passos
 
 Clone o repositório no seu ambiente local;
+\
 Entre no diretório do repositório através do comando:
 
 ```

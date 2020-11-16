@@ -40,11 +40,10 @@ $ npx sequelize db:seed:all
 
 ###### OBS 1: o seed pode demorar pra executar (2 min aproximadamente), pois a tabela de mensagens está sendo populada com um total de 600000 linhas. 
 
-###### OBS 2: estou disponibilizando também o backup do banco de dados caso deseje usar os mesmos dados que foram gerados quando executei, ou caso hajam problemas nas migrations.
 \
 Para gerar o .csv com as mesmas métricas que utilizei execute a query utils/db/estatistica.sql no seu SGDB e exporte o resultado nesse formato e com o nome 'analytics.csv'. Por fim insira esse arquivo na pasta src/public/csv e acesse http://localhost:8080 no seu navegador.
 
-###### OBS 3: Deixei o .csv que eu gerei na pasta mencionada, então mesmo que opte por não usar .csv a tela será exibida sem problemas, mas não com as estatíscas atualizadas.
+###### OBS 2: Deixei o .csv que eu gerei na pasta mencionada, então mesmo que opte por não usar .csv a tela será exibida sem problemas, mas não com as estatíscas atualizadas.
 \
 ![tela](utils/images/tela.png)
 

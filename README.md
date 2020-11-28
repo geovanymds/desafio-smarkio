@@ -33,7 +33,7 @@ Isso irá gerar um arquivo .env, onde você deve inserir as suas credenciais do 
 Para instalar as dependências utilizadas, criar as tabelas e popular o banco, respectivamente, utilize digite os seguintes comandos nesta ordem:
 
 ```
-$ npm intall
+$ npm install
 $ npx sequelize db:migrate
 $ npx sequelize db:seed:all
 ```
